@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pandas
+pandas_datareader
+sklearn
+tensorflow
+keras
+flask
+flask_cors
+yfinance
+
