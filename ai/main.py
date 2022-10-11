@@ -114,9 +114,10 @@ def main():
     prediction = scaler.inverse_transform(prediction)
     print (f"Prediction: {prediction}")
 
-
 if __name__ == '__main__':
-    main()
-    
-    
-
+    #main()
+    company = 'AAPL'
+    start = dt.datetime(1998,1,1)
+    end = dt.datetime(2019,1,1)
+    data = web.DataReader(company, 'yahoo', start, end)
+    print(data)
