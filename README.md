@@ -7,7 +7,7 @@ almightycandle.com is an AI one-page website application.
 ![2](https://user-images.githubusercontent.com/67660328/181349716-454a0127-1d44-4ff9-b329-1c862e8ce05b.png)
 ![3](https://user-images.githubusercontent.com/67660328/181349721-d3c2a077-492b-442f-a487-4bd19c3284d9.png)
 
-
+Instructional Video: https://www.youtube.com/watch?v=PuZY9q-aKLw&t=998s&ab_channel=NeuralNine
 
 Project made by the Computer Science Club Team at College of Dupage.
 
