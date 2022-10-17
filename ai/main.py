@@ -34,46 +34,60 @@ def predict_future_prices(company):
 
 
 def main():
-    #get 1 years worth of data for Apple
+    # Get 1 years worth of data for Apple
     company = 'AAPL'
     start = dt.datetime(1998,1,1)
     end = dt.datetime(2019,1,1)
     data = web.DataReader(company, 'yahoo', start, end)
     prediction_days = 120
+    # Fit between 0 and 1
     scaler = MinMaxScaler(feature_range=(0,1))
     now = dt.datetime.now()
      
-    #prepare data
-
+    # Prepare data
+    # Fit between 0 and 1
+    # 
     scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1,1))
 
+    # Training Data
     x_train = []
     y_train = []
 
     for x in range(prediction_days, len(scaled_data)):
+        # All past data
         x_train.append(scaled_data[x-prediction_days:x, 0])
+        # 61st Data, or the results/predictions
         y_train.append(scaled_data[x, 0])
 
     x_train, y_train = np.array(x_train), np.array(y_train)
+    # Reshape to a format
     x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 
     # Construction of the AI model:
     # Where model is the representation of the AI itself
     model = tf.keras.Sequential()
+
+    # Units = Individual Neuraons
+    # model.add = Layers, also too many layers can do overfitting
     model.add(LSTM(units=(128), return_sequences=True, input_shape=(x_train.shape[1], 1)))
     model.add(Dropout(0.25))
     model.add(LSTM(units=128, return_sequences=True))
     model.add(Dropout(0.25))
     model.add(LSTM(units=128))
     model.add(Dropout(0.25))
+
     model.add(Dense(units=1)) #Predicition of the next close
 
-    #Training starts here, runs for X epochs
-    #Each epoch is defined by model specifications above, can be modified to increase accuracy
+    # Training starts here, runs for X epochs
+    # Each epoch is defined by model specifications above, can be modified to increase accuracy
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(x_train, y_train, epochs=1, batch_size=56)
     print("Training is complete!")
-    #load test data
+
+    ''' Test The Model Accuracy On Testing Data'''
+    # Has to be on unseen data
+
+    # Load test data
     test_start=dt.datetime(2019,1,1)
     test_end=dt.datetime.now()
 
@@ -86,7 +100,7 @@ def main():
     model_inputs = model_inputs.reshape(-1,1)
     model_inputs = scaler.transform(model_inputs)
 
-    #Make predicition on Test Data
+    # Make predicition on Test Data
     x_test = []
 
     for x in range(prediction_days,len(model_inputs)):
@@ -97,7 +111,7 @@ def main():
     predicted_prices = model.predict(x_test)
     predicted_prices = scaler.inverse_transform(predicted_prices)
 
-    #Plot the test prediction
+    # Plot the test prediction
 
     plt.plot(actual_prices, color="black", label=f"Actual {company} Price")
     plt.plot(predicted_prices, color="green", label=f"Predicted {company} Price")
@@ -107,6 +121,7 @@ def main():
     plt.legend()
     plt.show()
 
+    # Predicting next day
     real_data = [model_inputs[len(model_inputs) + 1 - prediction_days:len(model_inputs+1), 0]]
     real_data = np.array(real_data)
     real_data = np.reshape(real_data, (real_data.shape[0], real_data.shape[1], 1))
