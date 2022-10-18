@@ -37,31 +37,47 @@ def main():
     # Get 1 years worth of data for Apple
     company = 'AAPL'
     start = dt.datetime(1998,1,1)
-    end = dt.datetime(2019,1,1)
+    end = dt.datetime(2022,1,1)
+    # Total 5110
     data = web.DataReader(company, 'yahoo', start, end)
-    prediction_days = 120
+    prediction_days = 60
     # Fit between 0 and 1
     scaler = MinMaxScaler(feature_range=(0,1))
     now = dt.datetime.now()
      
     # Prepare data
     # Fit between 0 and 1
-    # 
     scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1,1))
 
     # Training Data
     x_train = []
     y_train = []
 
+    # for x in range(60, 5110):
     for x in range(prediction_days, len(scaled_data)):
-        # All past data
+
+        # All past data 60 DAYS
+        # x_train.append(scaled_data[0:60, Column]
+        # x_train.append(scaled_data[1:61, Column]
+        # x_train.append(scaled_data[2:62, Column]
+        # x_train.append(scaled_data[3:63, Column]
         x_train.append(scaled_data[x-prediction_days:x, 0])
-        # 61st Data, or the results/predictions
+        #print(x_train)
+
+        # 61st Data, or the results/prediction
+        # y_train.append(scaled_data[60, Column])
+        # y_train.append(scaled_data[61, Column])
+        # y_train.append(scaled_data[62, Column])
+        # y_train.append(scaled_data[63, Column])
         y_train.append(scaled_data[x, 0])
+        #print(y_train)
+
+        #print(x_train, y_train)
 
     x_train, y_train = np.array(x_train), np.array(y_train)
     # Reshape to a format
     x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
+
 
     # Construction of the AI model:
     # Where model is the representation of the AI itself
@@ -81,14 +97,14 @@ def main():
     # Training starts here, runs for X epochs
     # Each epoch is defined by model specifications above, can be modified to increase accuracy
     model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(x_train, y_train, epochs=1, batch_size=56)
+    model.fit(x_train, y_train, epochs=1, batch_size=32)
     print("Training is complete!")
 
     ''' Test The Model Accuracy On Testing Data'''
     # Has to be on unseen data
 
     # Load test data
-    test_start=dt.datetime(2019,1,1)
+    test_start=dt.datetime(2022,1,1)
     test_end=dt.datetime.now()
 
     test_data = web.DataReader(company, 'yahoo', test_start, test_end)
@@ -116,7 +132,7 @@ def main():
     plt.plot(actual_prices, color="black", label=f"Actual {company} Price")
     plt.plot(predicted_prices, color="green", label=f"Predicted {company} Price")
     plt.title(f"{company} Share Price")
-    plt.xlabel('Time')
+    plt.xlabel('Days')
     plt.ylabel(f'{company} Share Price')
     plt.legend()
     plt.show()
@@ -130,9 +146,9 @@ def main():
     print (f"Prediction: {prediction}")
 
 if __name__ == '__main__':
-    #main()
+    main()
     company = 'AAPL'
     start = dt.datetime(1998,1,1)
     end = dt.datetime(2019,1,1)
     data = web.DataReader(company, 'yahoo', start, end)
-    print(data)
+    #print(data)
