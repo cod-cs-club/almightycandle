@@ -40,6 +40,7 @@ def main():
     end = dt.datetime(2022,1,1)
     # Total 5110
     data = web.DataReader(company, 'yahoo', start, end)
+    # Number of days used to predict a stock, predicting the 120th day (or last day)
     prediction_days = 60
     # Fit between 0 and 1
     scaler = MinMaxScaler(feature_range=(0,1))
@@ -49,8 +50,9 @@ def main():
     # Fit between 0 and 1
     scaled_data = scaler.fit_transform(data['Close'].values.reshape(-1,1))
 
-    # Training Data
+    # Put all 119 dates, except last
     x_train = []
+    # Put only last Date, to compare to the prediction
     y_train = []
 
     # for x in range(60, 5110):
@@ -86,11 +88,11 @@ def main():
     # Units = Individual Neuraons
     # model.add = Layers, also too many layers can do overfitting
     model.add(LSTM(units=(128), return_sequences=True, input_shape=(x_train.shape[1], 1)))
-    model.add(Dropout(0.25))
+    model.add(Dropout(0.05))
     model.add(LSTM(units=128, return_sequences=True))
-    model.add(Dropout(0.25))
+    model.add(Dropout(0.05))
     model.add(LSTM(units=128))
-    model.add(Dropout(0.25))
+    model.add(Dropout(0.05))
 
     model.add(Dense(units=1)) #Predicition of the next close
 
