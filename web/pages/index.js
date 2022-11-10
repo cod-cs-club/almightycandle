@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import SearchBar from "./searchBar.js"
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
 
       <h1>This is our AI Website</h1>
       <h3>We will start designing it once we are done with the AI</h3>
+      <SearchBar />
+
       
     </div>
   )
