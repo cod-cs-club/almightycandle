@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: https://startup-saas-classic.vercel.app
+Sitemap: https://startup-saas-classic.vercel.app/sitemap.xml
