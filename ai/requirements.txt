@@ -3,7 +3,7 @@ matplotlib
 pandas
 pandas_datareader
 sklearn
-tensorflow
+tensorflow 
 keras
 flask
 flask_cors

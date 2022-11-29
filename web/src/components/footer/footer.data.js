@@ -2,19 +2,23 @@ import { FaFacebook, FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
 
 export default [
   {
-    header: 'About Us',
+    header: 'Links Section',
     items: [
       {
         path: '/',
-        label: 'Support Center',
+        label: 'Meet the Team',
       },
       {
         path: '/',
-        label: 'Customer Support',
+        label: 'Home',
       },
       {
         path: '/',
-        label: 'About Us',
+        label: 'Our AI',
+      },
+      {
+        path: '/',
+        label: 'Discord',
       },
       {
         path: '/',
@@ -22,50 +26,9 @@ export default [
       },
     ],
   },
+
   {
-    header: 'Our Information',
-    items: [
-      {
-        path: '/',
-        label: 'Return Policy ',
-      },
-      {
-        path: '/',
-        label: 'Privacy Policy',
-      },
-      {
-        path: '/',
-        label: 'Terms & Conditions',
-      },
-      {
-        path: '/',
-        label: 'Site Map',
-      },
-    ],
-  },
-  {
-    header: 'My Account',
-    items: [
-      {
-        path: '/',
-        label: 'Press inquiries',
-      },
-      {
-        path: '/',
-        label: 'Social media ',
-      },
-      {
-        path: '/',
-        label: 'directories',
-      },
-      {
-        path: '/',
-        label: 'Images & B-roll',
-      },
-    ],
-  },
-  {
-    header: 'Contact',
+    header: 'Contact our Team',
     items: [
       {
         path: '/',
@@ -94,3 +57,47 @@ export default [
     ],
   },
 ];
+
+/*--------------------------------
+/*
+header: 'Our Information',
+items: [
+  {
+    path: '/',
+    label: 'Return Policy ',
+  },
+  {
+    path: '/',
+    label: 'Privacy Policy',
+  },
+  {
+    path: '/',
+    label: 'Terms & Conditions',
+  },
+  {
+    path: '/',
+    label: 'Site Map',
+  },
+],
+},
+{
+header: 'My Account',
+items: [
+  {
+    path: '/',
+    label: 'Press inquiries',
+  },
+  {
+    path: '/',
+    label: 'Social media ',
+  },
+  {
+    path: '/',
+    label: 'directories',
+  },
+  {
+    path: '/',
+    label: 'Images & B-roll',
+  },
+],
+}, */
