@@ -142,10 +142,7 @@ const styles = {
       a: {
         mr: 0,
         img: {
-          // center the logo
-          mx: 'auto',
-          display: 'block',
-          
+          mx: ['auto', null, null, null, 0],
         },
       },
     },
