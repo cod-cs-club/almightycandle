@@ -107,6 +107,7 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     test_start=dt.datetime(2022,1,1)
     test_end=dt.datetime.now()
 
+    currentCompany = company
     company = compareTo
 
     test_data = web.DataReader(company, 'yahoo', test_start, test_end)
@@ -130,14 +131,17 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     predicted_prices = scaler.inverse_transform(predicted_prices)
 
     # Plot the test prediction
-
+    plt.clf()
     plt.plot(actual_prices, color="black", label=f"Actual {company} Price")
     plt.plot(predicted_prices, color="green", label=f"Predicted {company} Price")
     plt.title(f"{company} Share Price")
     plt.xlabel('Days')
     plt.ylabel(f'{company} Share Price')
     plt.legend()
-    plt.show()
+    #This is obviously only going to work for my personal directory, simply change the directory to wherever you want to save the generated png
+    plt.savefig(f'C:\\Users\\Ali Ruyyashi\\OneDrive\\Desktop\\stock_testing_2\\{currentCompany}\\{currentCompany}_base(start={year},pd={prediction_days},l=3,u={unit},d={drop},e={epoch},bs={batchSize})({company}).png', dpi=500)
+
+    #plt.show()
 
     # Predicting next day
     real_data = [model_inputs[len(model_inputs) + 1 - prediction_days:len(model_inputs+1), 0]]
@@ -148,4 +152,6 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     print (f"Prediction: {prediction}")
 
 if __name__ == '__main__':
-    main(company="PFE",year=1985,prediction_days=30,unit=192,drop=0.5,epoch=65,batchSize=64,compareTo="AMZN")
+    company_array = ["AAPL","TSLA","META","WMT","PG","GOOG","XOM","KO"]
+    for x in company_array:
+        main(company="PFE",year=1985,prediction_days=15,unit=192,drop=0.5,epoch=65,batchSize=64,compareTo=x)
