@@ -33,15 +33,13 @@ def predict_future_prices(company):
     return fake_data
 
 
-def main():
+def main(company, year=1985,prediction_days=30,unit=192,drop,epoch,batchSize,compareTo):
     # Get 1 years worth of data for Apple
-    company = 'AAPL'
-    start = dt.datetime(1998,1,1)
+    start = dt.datetime(year,1,1)
     end = dt.datetime(2022,1,1)
     # Total 5110
     data = web.DataReader(company, 'yahoo', start, end)
     # Number of days used to predict a stock, predicting the 120th day (or last day)
-    prediction_days = 60
     # Fit between 0 and 1
     scaler = MinMaxScaler(feature_range=(0,1))
     now = dt.datetime.now()
@@ -87,19 +85,19 @@ def main():
 
     # Units = Individual Neuraons
     # model.add = Layers, also too many layers can do overfitting
-    model.add(LSTM(units=(128), return_sequences=True, input_shape=(x_train.shape[1], 1)))
-    model.add(Dropout(0.05))
-    model.add(LSTM(units=128, return_sequences=True))
-    model.add(Dropout(0.05))
-    model.add(LSTM(units=128))
-    model.add(Dropout(0.05))
+    model.add(LSTM(units=(unit), return_sequences=True, input_shape=(x_train.shape[1], 1)))
+    model.add(Dropout(drop))
+    model.add(LSTM(units=unit, return_sequences=True))
+    model.add(Dropout(drop))
+    model.add(LSTM(units=unit))
+    model.add(Dropout(drop))
 
     model.add(Dense(units=1)) #Predicition of the next close
 
     # Training starts here, runs for X epochs
     # Each epoch is defined by model specifications above, can be modified to increase accuracy
     model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(x_train, y_train, epochs=1, batch_size=32)
+    model.fit(x_train, y_train, epochs=epoch, batch_size=batchSize)
     print("Training is complete!")
 
     ''' Test The Model Accuracy On Testing Data'''
@@ -108,6 +106,8 @@ def main():
     # Load test data
     test_start=dt.datetime(2022,1,1)
     test_end=dt.datetime.now()
+
+    company = compareTo
 
     test_data = web.DataReader(company, 'yahoo', test_start, test_end)
     actual_prices = test_data['Close'].values
@@ -148,9 +148,4 @@ def main():
     print (f"Prediction: {prediction}")
 
 if __name__ == '__main__':
-    main()
-    company = 'AAPL'
-    start = dt.datetime(1998,1,1)
-    end = dt.datetime(2019,1,1)
-    data = web.DataReader(company, 'yahoo', start, end)
-    #print(data)
+    main(company="PFE",year=1985,prediction_days=30,unit=192,drop=0.5,epoch=65,batchSize=64,compareTo="AMZN")
