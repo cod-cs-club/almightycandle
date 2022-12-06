@@ -82,7 +82,7 @@ export default function Subscribe() {
             id="email"
             name="email"
             type="email"
-            placeholder="Enter Stock Symbol"
+            placeholder="Enter Stock Symbol (Chart will be displayed)"
           />
 
           <div>
