@@ -33,7 +33,7 @@ def predict_future_prices(company):
     return fake_data
 
 
-def main(company, year=1985,prediction_days=30,unit=192,drop,epoch,batchSize,compareTo):
+def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     # Get 1 years worth of data for Apple
     start = dt.datetime(year,1,1)
     end = dt.datetime(2022,1,1)
