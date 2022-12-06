@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/web", "destination": "/" }
+    { "source": "/", "destination": "/web" }
   ]
 }
