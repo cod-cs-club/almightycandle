@@ -11,6 +11,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+    "chart.js": "^4.0.1",
     "framer-motion": "^2.9.4",
     "next": "^10.0.0",
     "next-compose-plugins": "^2.2.0",
