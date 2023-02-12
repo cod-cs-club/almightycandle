@@ -34,12 +34,22 @@ import tensorflow as tf
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, LSTM
 
+def predict_future_prices(company):
+    # this function needs to be changed to return a "real" AI prediction
+    # this code is generating random data, and it is *just an example*
+    LENGTH = 10
+    time_index = pd.date_range(dt.datetime.now(), periods=LENGTH, freq='D')
+    fake_prices = np.random.randint(10, size=10)
+    fake_data = pd.DataFrame(fake_prices, index=time_index, columns=['price'])
+    return fake_data
 
-def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
+def trainAI(company):
     # Get 1 years worth of data for Apple
-    start = dt.datetime(year,1,1)
+    start = dt.datetime(1985,1,1)
     end = dt.datetime(2022,1,1)
-    # Total 5110
+    daysPassed = (end-start).days
+    time_index = pd.date_range(dt.datetime.now(), periods=daysPassed, freq='D')
+    
     data = pdr.DataReader(company, start, end)
     # Number of days used to predict a stock, predicting the 120th day (or last day)
     # Fit between 0 and 1
@@ -58,7 +68,7 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
 
 
     # for x in range(60, 5110):
-    for x in range(prediction_days, len(scaled_data)):
+    for x in range(30, len(scaled_data)):
 
 
         # All past data 60 DAYS
@@ -66,7 +76,7 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
         # x_train.append(scaled_data[1:61, Column]
         # x_train.append(scaled_data[2:62, Column]
         # x_train.append(scaled_data[3:63, Column]
-        x_train.append(scaled_data[x-prediction_days:x, 0])
+        x_train.append(scaled_data[x-30:x, 0])
         #print(x_train)
 
 
@@ -96,12 +106,12 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
 
     # Units = Individual Neuraons
     # model.add = Layers, also too many layers can do overfitting
-    model.add(LSTM(units=(unit), return_sequences=True, input_shape=(x_train.shape[1], 1)))
-    model.add(Dropout(drop))
-    model.add(LSTM(units=unit, return_sequences=True))
-    model.add(Dropout(drop))
-    model.add(LSTM(units=unit))
-    model.add(Dropout(drop))
+    model.add(LSTM(units=(192), return_sequences=True, input_shape=(x_train.shape[1], 1)))
+    model.add(Dropout(0.5))
+    model.add(LSTM(units=192, return_sequences=True))
+    model.add(Dropout(0.5))
+    model.add(LSTM(units=192))
+    model.add(Dropout(0.5))
 
 
     model.add(Dense(units=1)) #Predicition of the next close
@@ -110,22 +120,23 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     # Training starts here, runs for X epochs
     # Each epoch is defined by model specifications above, can be modified to increase accuracy
     model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(x_train, y_train, epochs=epoch, batch_size=batchSize)
+    model.fit(x_train, y_train, epochs=1, batch_size=64)
     print("Training is complete!")
+    real_data = pd.DataFrame(model, index=time_index, columns=['price'])
+    return real_data
+
+trainAI("AMZN")
+
+    #-----------------------------------------------------------------------------------------------------------
 
 
-    ''' Test The Model Accuracy On Testing Data'''
+''' Test The Model Accuracy On Testing Data
     # Has to be on unseen data
 
 
     # Load test data
     test_start=dt.datetime(2022,1,1)
     test_end=dt.datetime.now()
-
-
-    currentCompany = company
-    company = compareTo
-
 
     test_data = pdr.DataReader(company, test_start, test_end)
     actual_prices = test_data['Close'].values
@@ -134,7 +145,7 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     total_dataset = pd.concat((data['Close'], test_data['Close']), axis=0)
 
 
-    model_inputs = total_dataset[len(total_dataset) - len(test_data) - prediction_days:].values
+    model_inputs = total_dataset[len(total_dataset) - len(test_data) - 30:].values
     model_inputs = model_inputs.reshape(-1,1)
     model_inputs = scaler.transform(model_inputs)
 
@@ -143,8 +154,8 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     x_test = []
 
 
-    for x in range(prediction_days,len(model_inputs)):
-        x_test.append(model_inputs[x-prediction_days:x, 0])
+    for x in range(30,len(model_inputs)):
+        x_test.append(model_inputs[x-30:x, 0])
 
 
     x_test = np.array(x_test)
@@ -167,7 +178,7 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
 
 
     # Predicting next day
-    real_data = [model_inputs[len(model_inputs) + 1 - prediction_days:len(model_inputs+1), 0]]
+    real_data = [model_inputs[len(model_inputs) + 1 - 30:len(model_inputs+1), 0]]
     real_data = np.array(real_data)
     real_data = np.reshape(real_data, (real_data.shape[0], real_data.shape[1], 1))
     prediction = model.predict(real_data)
@@ -175,8 +186,7 @@ def main(company, year,prediction_days,unit,drop,epoch,batchSize,compareTo):
     print (f"Prediction: {prediction}")
 
 
+
 #This is obviously only going to work for my personal directory, simply change the directory to wherever you want to save the generated png
 #plt.savefig(f'C:\\Users\\Ali Ruyyashi\\OneDrive\\Desktop\\stock_testing_2\\{currentCompany}\\{currentCompany}_base(start={year},pd={prediction_days},l=3,u={unit},d={drop},e={epoch},bs={batchSize})({company}).png', dpi=500)
-
-if __name__ == '__main__':
-    main(company="PFE",year=1985,prediction_days=30,unit=192,drop=0.5,epoch=65,batchSize=64,compareTo="AMZN")
+'''
