@@ -79,9 +79,9 @@ export default function Subscribe() {
           </label>
           <Input
             ref={inputEl}
-            id="email"
-            name="email"
-            type="email"
+            id="stock-symbol"
+            name="stock-symbol"
+            type="text"
             placeholder="Enter Stock Symbol"
           />
 
