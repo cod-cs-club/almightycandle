@@ -17,7 +17,7 @@ export default function IndexPage() {
       <Layout>
         <SEO
           description="Stock Market Prediction and Analysis"
-          title="Stock AI"
+          title="Stock AI AlCa"
         />
         <Banner />
         <Feature />
