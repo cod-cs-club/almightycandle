@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Flex, Box, Heading, Text, Image } from 'theme-ui';
 import { Link } from 'components/link';
-import Subscribe from 'components/subscribe';
+import StockPrediction from 'components/predict';
 import BannerThumb from 'assets/images/banner-thumb.png';
 
 import client1 from 'assets/sponsor/paypal.svg';
@@ -29,7 +29,7 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary">
             Stock AI is a stock market prediction and analysis tool that uses machine learning to predict a stock's trend.
           </Text>
-          <Subscribe />
+          <StockPrediction />
           <Flex sx={styles.sponsorBox}>
             <Text sx={styles.sponsorTitle}>Sponsored by:</Text>
             <Box sx={styles.sponsorBox.sponsor}>
