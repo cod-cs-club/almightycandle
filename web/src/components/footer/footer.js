@@ -17,11 +17,11 @@ export default function Footer() {
               <Logo src={FooterLogo} />
             </Box>
             <nav className="footer__menu">
-              <Link path="/" label="Terms of use" />
-              <Link path="/" label="Privacy" />
+              <Link path="https://discord.gg/uzBEgApK9K" label="Terms of use" />
+              <Link path="https://discord.gg/uzBEgApK9K" label="Privacy" />
             </nav>
             <Text as="p" sx={styles.copyrightArea.copyright}>
-              Copyright by 2020 RedQ, Inc
+              Copyright by 2023 COD CS Club
             </Text>
           </Box>
           <Flex sx={styles.footer.menuArea}>
@@ -143,15 +143,18 @@ const styles = {
         mr: 0,
         img: {
           // center the logo
+          alignItems: 'center',
+          alignContent: 'center',
           mx: 'auto',
           display: 'block',
+
           
         },
       },
     },
     '.footer__menu': {
       display: 'flex',
-      justifyContent: ['center', null, null, null, 'flex-start'],
+      justifyContent: ['center', null, null, null, 'center'],
       flexWrap: 'wrap',
       mt: [3, null, null, null, 4],
       a: {
@@ -180,6 +183,8 @@ const styles = {
       fontSize: ['14px', 1],
       color: '#6D7886',
       pt: 1,
+      justifyContent: 'center',
+      display: 'flex',
     },
   },
 };

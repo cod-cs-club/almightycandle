@@ -24,7 +24,6 @@ export default function IndexPage() {
         <BusinessProfit />
         <Knowledge />
         <ClientFeedback />
-        <WorkFlow />
         <Support />
       </Layout>
     </ThemeProvider>

@@ -8,20 +8,19 @@ import ProfitThumb from 'assets/images/business-profit.png';
 import DrawingArrow from 'assets/drawing-arrow.svg';
 
 const data = {
-  title:
-    '1 Bla Bla Bla, and another bla with some extra bla for taste.',
+  title: 'Innovation in Stock Prediction',
   description:
-    'Bla Bla Bla, and another bla with some extra bla for taste.',
-  btnName: 'Explore Details',
-  btnURL: '#',
+    'AlCa is using revolutionizing techniques with its LSTM neural network model, providing three-day forecasts. By incorporating diverse industry stocks and leveraging historical data, we offer actionable insights for investors, traders, and financial analysts.',
+  btnName: '',
+  btnURL: '',
   points: [
     {
       icon: <IoIosCheckmarkCircle />,
-      text: 'Blahaous',
+      text: 'Extensively Trained on Various Sectors',
     },
     {
       icon: <IoIosCheckmarkCircle />,
-      text: 'Anohter Blahaous',
+      text: 'Secure and Scalable on AWS',
     },
   ],
 };

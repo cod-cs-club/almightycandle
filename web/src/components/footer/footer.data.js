@@ -1,24 +1,17 @@
-import { FaFacebook, FaTwitter, FaGithub, FaDribbble } from 'react-icons/fa';
+import { FaInstagram, FaDiscord, FaGithub, FaDribbble } from 'react-icons/fa';
 
 export default [
   {
     header: 'About Us',
     items: [
       {
-        path: '/',
+        path: 'https://discord.gg/uzBEgApK9K',
         label: 'Support Center',
       },
+      
       {
-        path: '/',
-        label: 'Customer Support',
-      },
-      {
-        path: '/',
+        path: 'https://discord.gg/uzBEgApK9K',
         label: 'About Us',
-      },
-      {
-        path: '/',
-        label: 'Copyright',
       },
     ],
   },
@@ -26,20 +19,12 @@ export default [
     header: 'Our Information',
     items: [
       {
-        path: '/',
-        label: 'Return Policy ',
-      },
-      {
-        path: '/',
+        path: 'https://discord.gg/uzBEgApK9K',
         label: 'Privacy Policy',
       },
       {
-        path: '/',
+        path: 'https://discord.gg/uzBEgApK9K',
         label: 'Terms & Conditions',
-      },
-      {
-        path: '/',
-        label: 'Site Map',
       },
     ],
   },
@@ -47,20 +32,12 @@ export default [
     header: 'My Account',
     items: [
       {
-        path: '/',
+        path: 'https://discord.gg/uzBEgApK9K',
         label: 'Press inquiries',
       },
       {
-        path: '/',
+        path: 'https://discord.gg/uzBEgApK9K',
         label: 'Social media ',
-      },
-      {
-        path: '/',
-        label: 'directories',
-      },
-      {
-        path: '/',
-        label: 'Images & B-roll',
       },
     ],
   },
@@ -68,28 +45,22 @@ export default [
     header: 'Contact',
     items: [
       {
-        path: '/',
-        label: 'Facebook',
-        name: 'facebook',
-        icon: <FaFacebook />,
-      },
-      {
-        path: '/',
-        label: 'Twitter',
-        name: 'twitter',
-        icon: <FaTwitter />,
-      },
-      {
-        path: '/',
+        path: 'https://github.com/cod-cs-club/almightycandle',
         label: 'Github',
         name: 'github',
         icon: <FaGithub />,
       },
       {
-        path: '/',
-        label: 'Dribbble',
-        name: 'dribbble',
-        icon: <FaDribbble />,
+        path: 'https://www.instagram.com/codcsclub/',
+        label: 'Instagram',
+        name: 'Instagram',
+        icon: <FaInstagram />,
+      },
+      {
+        path: 'https://discord.gg/uzBEgApK9K',
+        label: 'Discord',
+        name: 'Discord',
+        icon: <FaDiscord />,
       },
     ],
   },

@@ -10,29 +10,30 @@ import Award from 'assets/feature/award.svg';
 const data = [
   {
     id: 1,
-    imgSrc: Marketplace,
+    imgSrc: Award,
     altText: 'Marketplace',
-    title: 'Enter Text Here',
+    title: 'Predictive LSTM Model',
     text:
-      'Bla Bla Bla, and another bla with some extra bla for taste. Bla Bla Bla, and another bla with some extra bla for taste.',
+      'Utilizing a Long Short-Term Memory (LSTM) neural network, AlCa predicts stock prices for a future window of three days, leveraging historical data from various industry stocks.',
   },
   {
     id: 2,
-    imgSrc: Gift,
-    altText: 'Gift',
-    title: 'Enter Text Here',
+    imgSrc: Award,
+    altText: 'Technology & Frameworks',
+    title: 'Cutting-Edge Technology',
     text:
-      'Bla Bla Bla, and another bla with some extra bla for taste. Bla Bla Bla, and another bla with some extra bla for taste.',
+      'Built on Next.js and Flask for a smooth user experience, and powered by TensorFlow for intelligent machine learning computations. Hosted on AWS for high availability and performance.',
   },
   {
     id: 3,
     imgSrc: Award,
     altText: 'Awards',
-    title: 'Enter Text Here',
+    title: 'Security and Continual Improvement',
     text:
-      'Bla Bla Bla, and another bla with some extra bla for taste. Bla Bla Bla, and another bla with some extra bla for taste.',
+      'AlCa prioritizes security and privacy, adhering to industry regulations. The team continually updates the model with new data and refinements, making it a valuable resource for stock market investing.',
   },
 ];
+
 
 export default function Feature() {
   return (

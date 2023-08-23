@@ -166,7 +166,7 @@ export default function StockPrediction() {
 
         {predictionData && (
           <div style={{ textAlign: "center" }}>
-            <span style={{ color: "red" }}> Next 3 days Predicted Prices:</span>
+            <span style={{ color: "red" }}> Next 3 Days Predicted Prices:</span>
             {predictionData.map((price, index) => (
               <span key={index}>{` $${Number(price).toFixed(2)}.`}</span>
             ))}

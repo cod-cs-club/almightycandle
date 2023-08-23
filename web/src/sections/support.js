@@ -11,8 +11,8 @@ export default function Support() {
     <section sx={{ variant: 'section.support' }} id="support">
       <Container>
         <SectionHeader
-          title="Meet The Team"
-          description="Bla Bla Bla, and another bla with some extra bla for taste."
+          title="Meet The Team Behind AlCa"
+          description="Introducing the dedicated and talented team that powers Almightycandle.com. Our experts in machine learning, finance, and web development have come together to create a state-of-the-art LSTM neural network model for stock prediction. With a relentless focus on innovation and quality, we strive to provide accurate, actionable insights that empower your investment decisions."
         />
 
         <Box sx={styles.thumbWrapper}>

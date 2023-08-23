@@ -27,7 +27,7 @@ export default function Banner() {
             Predict a Stock with our AI
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Stock AI is a stock market prediction and analysis tool that uses machine learning to predict a stock's trend.
+            AlCa AI is a stock market prediction tool that uses machine learning to predict a stock's trend.
           </Text>
           <StockPrediction />
           <Flex sx={styles.sponsorBox}>
@@ -77,6 +77,8 @@ const styles = {
     },
     imageBox: {
       justifyContent: 'center',
+      // Vertical Align
+      alignItems: 'center',
       textAlign: ['center', null, null, null, 'right'],
       mr: [0, null, null, null, null, null, -6, -7],
       pl: [0, null, '40px'],

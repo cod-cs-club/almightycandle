@@ -6,11 +6,11 @@ import Image from 'components/image';
 import KnowledgeThumb from 'assets/images/knowledge-thumb.png';
 
 const data = {
-  title: '5 Bla Bla Bla, and another bla with some extra bla for taste.',
+  title: 'Harness the Power of Intelligent Prediction',
   description:
-    'Bla Bla Bla, and another bla with some extra bla for taste. Bla Bla Bla, and another bla with some extra bla for taste.',
-  btnName: 'Explore Details',
-  btnURL: '#',
+    'AlCa\'s LSTM neural network model is meticulously trained on a diverse collection of industry stocks, providing robust predictions for a future window of three days. Leveraging cutting-edge technology like TensorFlow and hosted on AWS, we offer secure, scalable, and actionable insights that empower your investment decisions.',
+  btnName: '',
+  btnURL: '',
 };
 
 export default function Knowledge() {

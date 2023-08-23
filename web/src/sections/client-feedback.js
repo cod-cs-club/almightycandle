@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Container, Box } from 'theme-ui';
+import { Container, Box, Button } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import Image from 'components/image';
 
@@ -11,9 +11,21 @@ export default function ClientFeedback() {
     <section sx={{ variant: 'section.feedback' }} id="feedback">
       <Container>
         <SectionHeader
-          title="Our Discord"
-          description="Bla Bla Bla, and another bla with some extra bla for taste. Bla Bla Bla, and another bla with some extra bla for taste."
+          title="Join Our Discord Community"
+          description="Engage with the vibrant community of AlCa users, investors, and enthusiasts. Our Discord channel offers a platform for lively discussions, knowledge sharing, and direct support from our team. Whether you're a seasoned trader or just starting out, find insights and connections to enhance your investment journey."
         />
+
+        <Box sx={{ textAlign: 'center', pb: 6  }}>
+          <Button
+            variant="primary"
+            sx={{ mx: 'auto' }} // center the button horizontally
+            onClick={() => window.open('https://discord.gg/uzBEgApK9K', '_blank')} // open link in a new tab
+            // padding
+
+          >
+            Join Discord
+          </Button>
+        </Box>
 
         <Box sx={styles.thumbWrapper}>
           <Image
@@ -27,6 +39,7 @@ export default function ClientFeedback() {
     </section>
   );
 }
+
 
 const styles = {
   thumbWrapper: {
