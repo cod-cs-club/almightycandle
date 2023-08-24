@@ -94,7 +94,7 @@ export default function StockPrediction() {
             id="stock-symbol"
             name="stock-symbol"
             type="text"
-            placeholder="Enter Stock Symbol"
+            placeholder="Enter Stock Symbol (AAPL, AMZN...)"
           />
 
           <div>
