@@ -11,7 +11,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "chart.js": "^2.9.4",
+    "chart.js": "^4.1.1",
     "date-fns": "^2.30.0",
     "framer-motion": "^2.9.4",
     "next": "^10.2.3",
