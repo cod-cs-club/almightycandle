@@ -31,7 +31,7 @@ export default function StockPrediction() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/predict?symbol=${inputEl.current.value}`
+        `https://stimulatingportlybinarysearchtree.dimitarstojano2.repl.co/predict?symbol=${inputEl.current.value}`
       );
       const data = await res.json();
 
