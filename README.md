@@ -35,21 +35,21 @@ It provides a sleek interface for users to input stock symbols and receive real-
    
 3. **Navigate to the Project Directory:**
    
-   \```bash
+   ```bash
    cd your-repo-name
-   \```
+   ```
    
 5. **Install Dependencies:**
    
-   \```bash
+   ```bash
    npm install
-   \```
+   ```
    
 7. **Start the Development Server:**
    
-   \```bash
+   ```bash
    npm run dev
-   \```
+   ```
 
 ## API Endpoints
 - `/predict`: GET request to obtain prediction for the given stock symbol.
