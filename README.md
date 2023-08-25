@@ -1,30 +1,50 @@
-Hey Team, and everyone!
+# Stock Prediction Website
 
-## Getting Started
+## Overview
+This project offers a cutting-edge stock predicting website leveraging the power of next.js for the front-end design and Flask and TensorFlow for the back-end computations. It provides a sleek interface for users to input stock symbols and receive real-time predictions for the next three days, displayed through elegant charts and concise figures.
 
+## Features
+- **Real-time Stock Prediction:** Utilizes a pre-trained LSTM model to predict stock prices for the next three days.
+- **User-friendly Interface:** Easy input of stock symbols like AAPL, AMZN, etc., to fetch and visualize predictions.
+- **Historical Data Visualization:** Charts historical stock prices alongside predictions using recharts library.
+- **Support for Multiple Stocks:** Trained on a diverse set of stocks including technology, healthcare, entertainment, and more.
 
-First, install all packages.
-```
-npm install
-```
+## Technologies Used
+- **Front End:** Next.js, React, Theme-UI
+- **Back End:** Flask, TensorFlow
+- **Data Source:** Yahoo Finance API for fetching historical data
+- **Charts:** Recharts library for dynamic charting
 
-Then, run the development server:
+## How to Run
+1. **Clone the Repository:**
+   \```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   \```
+2. **Navigate to the Project Directory:**
+   \```bash
+   cd your-repo-name
+   \```
+3. **Install Dependencies:**
+   \```bash
+   npm install
+   \```
+4. **Start the Development Server:**
+   \```bash
+   npm run dev
+   \```
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## API Endpoints
+- `/predict`: GET request to obtain prediction for the given stock symbol.
+- `/test`: GET request to test if the server is running properly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Model Training
+The LSTM model is trained on a wide variety of stocks using historical data. The training code is included in `train_model.py`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributions
+Feel free to fork this repository and contribute by submitting a pull request. Please adhere to the existing coding style, and ensure that your code is properly documented and tested.
 
-## Learn More
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+## Acknowledgments
+Special thanks to the libraries and data sources that made this project possible.
