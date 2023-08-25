@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
   Brush,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function StockPrediction() {
@@ -119,7 +120,8 @@ export default function StockPrediction() {
         </Flex>
       </form>
       <div>
-        <LineChart width={500} height={400} data={historicalData}>
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart data={historicalData}>
           <Line
             type="monotone"
             dataKey="price"
@@ -163,6 +165,7 @@ export default function StockPrediction() {
             endIndex={historicalData.length - 1}
           />
         </LineChart>
+        </ResponsiveContainer>
 
         {predictionData && (
           <div style={{ textAlign: "center" }}>
