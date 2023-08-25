@@ -55,7 +55,7 @@ The LSTM model is trained on a wide variety of stocks using historical data. The
 Feel free to fork this repository and contribute by submitting a pull request. Please adhere to the existing coding style, and ensure that your code is properly documented and tested.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 Special thanks to the libraries and data sources that made this project possible.
