@@ -1,10 +1,10 @@
 # Stock Prediction Website
 
-<p float="left">
+<div align="center">
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/1.png" width="30%" />
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/2.png" width="30%" /> 
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/3.png" width="30%" />
-</p>
+</div>
 
 
 ## Overview
