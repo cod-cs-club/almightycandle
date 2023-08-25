@@ -77,7 +77,7 @@ export default function StockPrediction() {
         submitting: false,
         info: {
           error: true,
-          msg: "Error fetching prediction: " + error.message,
+          msg: "Invalid Symbol",
         },
       });
     }
