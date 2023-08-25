@@ -1,4 +1,4 @@
-# Stock Prediction Website [almightycandle.com](https://www.almightycandle.com/)
+# [almightycandle.com](https://www.almightycandle.com/), a Stock Prediction Website
 
 <div align="center">
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/1.png" width="30%" />
