@@ -8,7 +8,11 @@
 
 
 ## Overview
-This project offers a cutting-edge stock predicting website leveraging the power of next.js for the front-end design and Flask and TensorFlow for the back-end computations. It provides a sleek interface for users to input stock symbols and receive real-time predictions for the next three days, displayed through elegant charts and concise figures.
+This project offers a cutting-edge stock predicting website leveraging the power of:
+- next.js for the front-end design
+- Flask and TensorFlow for the back-end computations.
+
+It provides a sleek interface for users to input stock symbols and receive real-time predictions for the next three days, displayed through elegant charts and concise figures.
 
 ## Features
 - **Real-time Stock Prediction:** Utilizes a pre-trained LSTM model to predict stock prices for the next three days.
