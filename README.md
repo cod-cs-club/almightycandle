@@ -28,18 +28,25 @@ It provides a sleek interface for users to input stock symbols and receive real-
 
 ## How to Run
 1. **Clone the Repository:**
+   
    \```bash
    git clone https://github.com/your-username/your-repo-name.git
    \```
-2. **Navigate to the Project Directory:**
+   
+3. **Navigate to the Project Directory:**
+   
    \```bash
    cd your-repo-name
    \```
-3. **Install Dependencies:**
+   
+5. **Install Dependencies:**
+   
    \```bash
    npm install
    \```
-4. **Start the Development Server:**
+   
+7. **Start the Development Server:**
+   
    \```bash
    npm run dev
    \```
