@@ -1,8 +1,11 @@
 # Stock Prediction Website
 
-https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/1.png
-https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/2.png
-https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/3.png
+<p float="left">
+  <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/1.png" width="33%" />
+  <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/2.png" width="33%" /> 
+  <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/3.png" width="33%" />
+</p>
+
 
 ## Overview
 This project offers a cutting-edge stock predicting website leveraging the power of next.js for the front-end design and Flask and TensorFlow for the back-end computations. It provides a sleek interface for users to input stock symbols and receive real-time predictions for the next three days, displayed through elegant charts and concise figures.
