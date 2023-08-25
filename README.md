@@ -10,7 +10,7 @@
 ## Overview
 This project offers a cutting-edge stock predicting website leveraging the power of:
 - **Next.js** for the front-end design
-- **Flask** and **TensorFlow** for the back-end computations ([Backend Repository])(https://github.com/dimitri-sky/AlCaFlask)
+- **Flask** and **TensorFlow** for the back-end computations [(Backend Repository)](https://github.com/dimitri-sky/AlCaFlask)
 
 It provides a sleek interface for users to input stock symbols and receive real-time predictions for the next three days, displayed through elegant charts and concise figures.
 
