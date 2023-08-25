@@ -30,13 +30,13 @@ It provides a sleek interface for users to input stock symbols and receive real-
 1. **Clone the Repository:**
    
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/cod-cs-club/almightycandle.git
    ```
    
 3. **Navigate to the Project Directory:**
    
    ```bash
-   cd your-repo-name
+   cd almightycandle
    ```
    
 5. **Install Dependencies:**
