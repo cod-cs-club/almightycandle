@@ -29,9 +29,9 @@ It provides a sleek interface for users to input stock symbols and receive real-
 ## How to Run
 1. **Clone the Repository:**
    
-   \```bash
+   ```bash
    git clone https://github.com/your-username/your-repo-name.git
-   \```
+   ```
    
 3. **Navigate to the Project Directory:**
    
