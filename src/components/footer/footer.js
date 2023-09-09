@@ -21,7 +21,7 @@ export default function Footer() {
               <Link path="https://discord.gg/uzBEgApK9K" label="Privacy" />
             </nav>
             <Text as="p" sx={styles.copyrightArea.copyright}>
-              Copyright by 2023 COD CS Club
+              Copyright by 2023 AlCa AI
             </Text>
           </Box>
           <Flex sx={styles.footer.menuArea}>

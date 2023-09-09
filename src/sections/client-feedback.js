@@ -11,7 +11,7 @@ export default function ClientFeedback() {
     <section sx={{ variant: 'section.feedback' }} id="feedback">
       <Container>
         <SectionHeader
-          title="Join Our Discord Community"
+          title="Our AI"
           description="Engage with the vibrant community of AlCa users, investors, and enthusiasts. Our Discord channel offers a platform for lively discussions, knowledge sharing, and direct support from our team. Whether you're a seasoned trader or just starting out, find insights and connections to enhance your investment journey."
         />
 
@@ -23,7 +23,7 @@ export default function ClientFeedback() {
             // padding
 
           >
-            Join Discord
+            Join Here
           </Button>
         </Box>
 

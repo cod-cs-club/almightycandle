@@ -5,11 +5,11 @@ export default [
   },
   {
     path: 'feature',
-    label: 'Our AI',
+    label: 'Pricing',
   },
   {
     path: 'feedback',
-    label: 'Discord',
+    label: 'Our AI',
   },
   {
     path: 'support',

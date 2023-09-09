@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Container, Grid } from 'theme-ui';
+import { Container, Grid, Box, Button } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import FeatureCard from 'components/feature-card.js';
 import Marketplace from 'assets/feature/marketplace.svg';
@@ -12,25 +12,25 @@ const data = [
     id: 1,
     imgSrc: Award,
     altText: 'Marketplace',
-    title: 'Predictive LSTM Model',
+    title: 'Starter Package',
     text:
-      'Utilizing a Long Short-Term Memory (LSTM) neural network, AlCa predicts stock prices for a future window of three days, leveraging historical data from various industry stocks.',
+      "Ideal for small businesses or startups that are new to AI. This package includes basic data analysis, simple machine learning models, and a limited set of features tailored to your business needs. Priced affordably, it's a perfect way to dip your toes into the world of AI without a hefty investment.",
   },
   {
     id: 2,
     imgSrc: Award,
     altText: 'Technology & Frameworks',
-    title: 'Cutting-Edge Technology',
+    title: 'Advanced Package',
     text:
-      'Built on Next.js and Flask for a smooth user experience, and powered by TensorFlow for intelligent machine learning computations. Hosted on AWS for high availability and performance.',
+      "Designed for medium-sized enterprises with more complex needs. This package offers advanced machine learning models, data engineering, and the integration of AI functionalities into your existing systems. The Advanced Package also includes quarterly model updates and performance tracking to ensure ongoing optimization.",
   },
   {
     id: 3,
     imgSrc: Award,
     altText: 'Awards',
-    title: 'Security and Continual Improvement',
+    title: 'Enterprise Package',
     text:
-      'AlCa prioritizes security and privacy, adhering to industry regulations. The team continually updates the model with new data and refinements, making it a valuable resource for stock market investing.',
+      "Customized end-to-end solutions for large corporations with intricate, high-demand AI requirements. This premium package includes high-level data analysis, the development of complex machine learning models like neural networks or NLP-based algorithms, and full-scale system integration. Additional perks include priority customer support, monthly performance reviews, and continuous model refinements based on real-time data.",
   },
 ];
 
@@ -40,8 +40,8 @@ export default function Feature() {
     <section sx={{ variant: 'section.feature' }} id="feature">
       <Container>
         <SectionHeader
-          title="Our AI"
-          description="Focus only on the stock, we take care of what's most likely next. As soon as you enter the Stock, our AI has already ran it's neural network optimazied for prediction."
+          title="Custom AI Development Pricing"
+          description="Unlock the potential of custom-built AI for your business with AlCa. Our team of machine learning experts, financial analysts, and web developers can develop tailored AI solutions to meet your specific needs. With our proven expertise in LSTM neural networks, TensorFlow, and AWS hosting, we offer a range of pricing plans designed to provide cost-effective, high-impact solutions."
         />
 
         <Grid sx={styles.grid}>
@@ -55,6 +55,17 @@ export default function Feature() {
             />
           ))}
         </Grid>
+        <Box sx={{ textAlign: 'center', pt: 8  }}>
+          <Button
+            variant="primary"
+            sx={{ mx: 'auto' }} // center the button horizontally
+            onClick={() => window.open('https://discord.gg/uzBEgApK9K', '_blank')} // open link in a new tab
+            // padding
+
+          >
+            Contact Us
+          </Button>
+        </Box>
       </Container>
     </section>
   );
