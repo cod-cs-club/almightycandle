@@ -1,6 +1,8 @@
-# [almightycandle.com](https://www.almightycandle.com/), a Stock Prediction Website. (AWS)
 
 <div align="center">
+  <h1>Visit Now: <a href="https://www.almightycandle.com/">almightycandle.com</a></h1>
+  <h2>Stock Prediction Website. (AWS)</h2> 
+
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/1.png" width="30%" />
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/2.png" width="30%" /> 
   <img src="https://github.com/cod-cs-club/almightycandle/blob/main/src/assets/images/3.png" width="30%" />
