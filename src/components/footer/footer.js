@@ -14,11 +14,11 @@ export default function Footer() {
         <Box sx={styles.footer.footerTopArea}>
           <Box sx={styles.copyrightArea}>
             <Box className="footer__logo">
-              <Logo src={FooterLogo} />
+              
             </Box>
             <nav className="footer__menu">
-              <Link path="https://discord.gg/uzBEgApK9K" label="Terms of use" />
-              <Link path="https://discord.gg/uzBEgApK9K" label="Privacy" />
+              <Link path="https://leadaccountingllc.com/" label="Terms of use" />
+              <Link path="https://leadaccountingllc.com/" label="Privacy" />
             </nav>
             <Text as="p" sx={styles.copyrightArea.copyright}>
               Copyright by 2023 AlCa AI

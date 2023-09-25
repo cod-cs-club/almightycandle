@@ -59,7 +59,7 @@ export default function Feature() {
           <Button
             variant="primary"
             sx={{ mx: 'auto' }} // center the button horizontally
-            onClick={() => window.open('https://discord.gg/uzBEgApK9K', '_blank')} // open link in a new tab
+            onClick={() => window.open('https://leadaccountingllc.com/', '_blank')} // open link in a new tab
             // padding
 
           >

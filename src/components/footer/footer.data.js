@@ -5,12 +5,12 @@ export default [
     header: 'About Us',
     items: [
       {
-        path: 'https://discord.gg/uzBEgApK9K',
+        path: 'https://leadaccountingllc.com/',
         label: 'Support Center',
       },
       
       {
-        path: 'https://discord.gg/uzBEgApK9K',
+        path: 'https://leadaccountingllc.com/',
         label: 'About Us',
       },
     ],
@@ -19,11 +19,11 @@ export default [
     header: 'Our Information',
     items: [
       {
-        path: 'https://discord.gg/uzBEgApK9K',
+        path: 'https://leadaccountingllc.com/',
         label: 'Privacy Policy',
       },
       {
-        path: 'https://discord.gg/uzBEgApK9K',
+        path: 'https://leadaccountingllc.com/',
         label: 'Terms & Conditions',
       },
     ],
@@ -32,11 +32,11 @@ export default [
     header: 'My Account',
     items: [
       {
-        path: 'https://discord.gg/uzBEgApK9K',
+        path: 'https://leadaccountingllc.com/',
         label: 'Press inquiries',
       },
       {
-        path: 'https://discord.gg/uzBEgApK9K',
+        path: 'https://leadaccountingllc.com/',
         label: 'Social media ',
       },
     ],
@@ -51,7 +51,7 @@ export default [
         icon: <FaGithub />,
       },
       {
-        path: 'https://www.instagram.com/codcsclub/',
+        path: 'https://www.instagram.com/lead_accounting/',
         label: 'Instagram',
         name: 'Instagram',
         icon: <FaInstagram />,
