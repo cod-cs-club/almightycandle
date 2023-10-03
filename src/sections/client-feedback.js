@@ -19,7 +19,7 @@ export default function ClientFeedback() {
           <Button
             variant="primary"
             sx={{ mx: 'auto' }} // center the button horizontally
-            onClick={() => window.open('https://discord.gg/uzBEgApK9K', '_blank')} // open link in a new tab
+            onClick={() => window.open('', '_blank')} // open link in a new tab
             // padding
 
           >
