@@ -56,12 +56,6 @@ export default [
         name: 'Instagram',
         icon: <FaInstagram />,
       },
-      {
-        path: 'https://discord.gg/uzBEgApK9K',
-        label: 'Discord',
-        name: 'Discord',
-        icon: <FaDiscord />,
-      },
     ],
   },
 ];

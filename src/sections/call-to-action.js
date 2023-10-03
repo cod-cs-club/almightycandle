@@ -16,7 +16,7 @@ export default function CallToAction() {
           </Heading>
           <Box sx={styles.btnWrapper}>
             <Button variant="whiteButton" aria-label="Contact Us"
-            onClick={() => window.open('https://discord.gg/uzBEgApK9K', '_blank')}>
+            onClick={() => window.open('', '_blank')}>
             
               CONTACT US NOW
             </Button>
