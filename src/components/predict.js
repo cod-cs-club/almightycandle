@@ -32,7 +32,7 @@ export default function StockPrediction() {
 
     try {
       const res = await fetch(
-        `https://stimulatingportlybinarysearchtree.dimitarstojano2.repl.co/predict?symbol=${inputEl.current.value}`
+        `https://al-ca-dimitarstojano2.replit.app/predict?symbol=${inputEl.current.value}`
       );
       const data = await res.json();
 
